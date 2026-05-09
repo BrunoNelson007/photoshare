@@ -6,6 +6,12 @@ const nextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
+  output: 'standalone', 
+  experimental: {
+    // This prevents the builder from trying to execute your API code
+    workerThreads: false,
+    cpus: 1
+  },
   images: {
     unoptimized: true,
     remotePatterns: [
