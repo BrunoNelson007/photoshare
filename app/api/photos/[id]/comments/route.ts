@@ -12,6 +12,8 @@ import { commentSchema, validateInput, formatValidationErrors } from '@/lib/vali
 import type { Comment } from '@/types'
 import { v4 as uuidv4 } from 'uuid'
 
+export const dynamic = 'force-dynamic';
+
 interface RouteParams {
   params: Promise<{ id: string }>
 }
