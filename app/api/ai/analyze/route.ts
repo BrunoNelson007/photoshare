@@ -3,6 +3,8 @@ import { auth } from '@/lib/auth'
 import { analyzeImageFromBuffer } from '@/lib/azure-vision'
 import { checkRateLimit, createRateLimitHeaders } from '@/lib/security/rate-limiter'
 
+export const dynamic = 'force-dynamic';
+
 export async function POST(request: NextRequest) {
   try {
     const session = await auth()
