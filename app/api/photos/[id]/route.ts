@@ -1,3 +1,5 @@
+export const dynamic = 'force-dynamic';
+
 import { NextRequest, NextResponse } from 'next/server'
 import { auth } from '@/lib/auth'
 import { getPhotoByIdCrossPartition, updatePhoto, deletePhoto as deletePhotoFromDb } from '@/lib/azure-cosmos'
