@@ -1,3 +1,5 @@
+export const dynamic = 'force-dynamic';
+
 import { NextRequest, NextResponse } from 'next/server'
 import { auth } from '@/lib/auth'
 import { 
@@ -11,8 +13,6 @@ import { checkRateLimit, createRateLimitHeaders } from '@/lib/security/rate-limi
 import { commentSchema, validateInput, formatValidationErrors } from '@/lib/validation/schemas'
 import type { Comment } from '@/types'
 import { v4 as uuidv4 } from 'uuid'
-
-export const dynamic = 'force-dynamic';
 
 interface RouteParams {
   params: Promise<{ id: string }>
